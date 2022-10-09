@@ -6,7 +6,7 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sh 'docker build -t nwajienelson/dp-alpine:latest .'
+        sh 'docker build -t nwajienelson/nx-alpine:latest .'
       }
     }
     stage('Login') {
@@ -16,7 +16,7 @@ pipeline {
     }
     stage('Push') {
       steps {
-        sh 'docker push nwajienelson/dp-alpine:latest'
+        sh 'docker push nwajienelson/nx-alpine:latest'
       }
     }
   }
